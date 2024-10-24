@@ -21,7 +21,7 @@ const Banner = () => {
 
                   <p className=' py-4 text-[rgba(255, 255, 255, 0.7)]   '>Beyond Boundaries Beyond Limits</p>
 
-                  <button className='btn box-border p-3 text-black font-bold bg-[#E7FE29] rounded-xl outline-[#E7FE29] hover:bg-[#D6E527] outline-offset-4 border-none'>
+                  <button className='btn box-border p-3 text-black font-bold bg-white hover:bg-[#E7FE29] rounded-xl outline-[#E7FE29] hover:bg-[#D6E527] outline-offset-4 border-none'>
                       Claim Free Credit
                     </button>
              </div>
