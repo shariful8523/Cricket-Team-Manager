@@ -2,7 +2,7 @@ import React from 'react';
 import Profile from '../../assets/logo.png'
 
 
-function Navabr(props) {
+function Navabr() {
     return (
         <div className='flex justify-between py-7 mx-auto w-11/12'>
             <div className='w-14'>

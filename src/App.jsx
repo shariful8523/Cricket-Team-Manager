@@ -1,5 +1,8 @@
-import './App.css'
+
 import Navabr from './componets/Navbar/Navabr'
+import Banner from './componets/Banner/Banner'
+import Catagory from './componets/Catagory'
+
 
 function App() {
   
@@ -8,6 +11,8 @@ function App() {
     <>
       
      <Navabr></Navabr>
+     <Banner></Banner>
+    <Catagory></Catagory>
 
      
     </>
