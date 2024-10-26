@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Blog from './Blog/Blog';
 
-const Blogs = () => {
+const Blogs = ({handelItem}) => {
     
+      
+
     const [blogs, setBlogs] = useState([]);
 
     useEffect( () => {
@@ -16,10 +18,11 @@ const Blogs = () => {
 
     return (
         <div>
+           
             
             <div className=' grid grid-cols-3  gap-3 p-6  '>
             {
-                blogs.map(blog => <Blog key={blog.id} blog={blog}  ></Blog>)
+                blogs.map(blog => <Blog key={blog.id} blog={blog} handelItem={handelItem} ></Blog>)
             }
             </div>
 

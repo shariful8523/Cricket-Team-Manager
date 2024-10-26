@@ -1,23 +1,59 @@
 
 import Navabr from './componets/Navbar/Navabr'
-import Banner from './componets/Banner/Banner'
+
 import Catagory from './componets/Catagory'
-import Blogs from './componets/Blogs/Blogs'
 import Footer from './componets/Footer/Footer'
+import { useState } from 'react'
 
 
 function App() {
-  
+   
+
+
+    const [selectItem, setSelectecItem] = useState ([]);
+          
+         
+
+    const handelDelete = (playerId) => {
+      const removePlayer = selectItem.filter((p)=> p.playerId!=playerId);
+      setSelectecItem(removePlayer);
+}
+
+
+
+
+    const handelItem = (item) =>{
+
+      const isexist = selectItem.find((i)=>i.playerId == item.playerId);
+         
+       if (isexist){
+
+         alert("r sdd kora ase")
+       }
+      else{
+        const newItem = [...selectItem,item];
+      setSelectecItem(newItem);
+      }
+
+      
+      
+
+    }
+
+
+
+
 
   return (
     <>
       
      <Navabr></Navabr>
-     <Banner></Banner>
-    <Catagory></Catagory>
+    
+    <Catagory  handelDelete={handelDelete}  handelItem={handelItem} selectItem={selectItem}
+    ></Catagory>
 
-   <Blogs></Blogs>
-   <Footer></Footer>
+    
+    <Footer></Footer>
    
 
      
