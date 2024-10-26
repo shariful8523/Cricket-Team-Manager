@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types'; 
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 
 const Blog = ({blog,handelItem}) => {
-          console.log(handelItem);
+         
          
 
     const { playerId, name, country, image, role, battingType, bowlingType, biddingPrice } =blog;
+    
     return (
 
 
@@ -35,7 +37,7 @@ const Blog = ({blog,handelItem}) => {
             <button className='box-border border p-2 border-[rgba(19,19,19,0.1)] rounded-lg'
                onClick={()=>handelItem(blog)}
             >Choose Player</button>
-
+             
             </div>
 
         </div>

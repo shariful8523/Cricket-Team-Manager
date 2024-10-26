@@ -2,12 +2,48 @@ import React from 'react';
 import footerImage from '../../assets/logo-footer.png'
 const Footer = () => {
     return (
+
         <div>
            
            <div className="bg-[#06091a] w-full py-20">
-  <img className="justify-center mx-auto mb-10" src={footerImage} alt="Footer Logo" />
 
-  <footer className="bg-[#06091a] text-white text-opacity-60 p-10 flex justify-around">
+            
+
+               <div className='absolute -mt-[150px] ml-[470px] '>
+
+
+               <div className='p-4 border border-white border-[1px] rounded-xl'>
+            <div class="max-w-xl mx-auto bg-gradient-to-r from-blue-100 via-white to-yellow-100 p-8 rounded-2xl shadow-lg text-center">
+    <h2 class="text-2xl font-bold text-gray-800 mb-2">Subscribe to our Newsletter</h2>
+    <p class="text-gray-600 mb-4">Get the latest updates and news right in your inbox!</p>
+    
+    <div class="flex justify-center items-center">
+        <input 
+            type="email" 
+            placeholder="Enter your email" 
+            class="p-2 rounded-l-full border border-gray-300 outline-none w-full max-w-xs"
+        />
+        <button class="bg-gradient-to-r from-pink-500 to-yellow-500 text-white px-4 py-2 rounded-r-full font-semibold">
+            Subscribe
+        </button>
+    </div>
+    </div>
+
+        </div>
+
+
+
+
+
+
+               </div>
+
+
+            <div className='relative'> 
+            
+           <img className="justify-center mx-auto mt-36" src={footerImage} alt="Footer Logo" />
+
+           <footer className="bg-[#06091a] text-white text-opacity-60 p-10 flex justify-around">
     
     {/* About Section */}
     <div>
@@ -46,12 +82,15 @@ const Footer = () => {
       </fieldset>
     </form>
 
-  </footer>
+           </footer>
 
-  <div className="text-center mt-8 text-sm text-white text-opacity-60">
-    <p>@2024 Your Company. All Rights Reserved.</p>
-  </div>
-</div>
+           <div className="text-center mt-8 text-sm text-white text-opacity-60">
+          <p>@2024 Your Company. All Rights Reserved.</p>
+              </div>
+
+             </div>
+
+          </div>
 
         
         </div>

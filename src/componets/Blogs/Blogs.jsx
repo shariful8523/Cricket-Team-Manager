@@ -1,18 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Blog from './Blog/Blog';
+import Blog from './Blog/Blog'
 
-const Blogs = ({handelItem}) => {
+const Blogs = ({handelItem, blogs}) => {
     
       
-
-    const [blogs, setBlogs] = useState([]);
-
-    useEffect( () => {
-        fetch('blogs.json')
-        .then(res => res.json())
-        .then(data => setBlogs(data))
-
-    }, [])
 
 
 
@@ -20,7 +11,7 @@ const Blogs = ({handelItem}) => {
         <div>
            
             
-            <div className=' grid grid-cols-3  gap-3 p-6  '>
+            <div className=' grid grid-cols-3  gap-3 p-6  mb-32 '>
             {
                 blogs.map(blog => <Blog key={blog.id} blog={blog} handelItem={handelItem} ></Blog>)
             }

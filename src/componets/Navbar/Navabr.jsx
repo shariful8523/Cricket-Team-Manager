@@ -2,20 +2,21 @@ import React, { useState } from 'react';
 import Profile from '../../assets/logo.png'
 import BannerLogo from '../../assets/banner-main.png'
 
-function Navabr() {
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
-         const [coin ,setCoin] = useState (0);
 
-         const handelAdd = () => {
-            const newCoin = coin + 100000;
-            setCoin (newCoin)
-         }
+
+
+function Navabr({coin,handelAdd}) {
+
+        
 
 
     return (
 
         <div>
-        <div className='flex justify-between py-7 mx-auto w-11/12'>
+        <div className='   flex justify-between py-7 mx-auto w-11/12  '>
             <div className='w-14'>
             <img src={Profile} alt="" />
             </div>
@@ -51,9 +52,11 @@ function Navabr() {
 
                   <p className=' py-4 text-[rgba(255, 255, 255, 0.7)]   '>Beyond Boundaries Beyond Limits</p>
 
-                  <button  onClick={handelAdd} className='btn box-border p-3 text-black font-bold bg-white hover:bg-[#E7FE29] rounded-xl outline-[#E7FE29] hover:bg-[#D6E527] outline-offset-4 border-none'>
+                  <button  onClick={handelAdd} className='btn box-border p-3 text-black font-bold bg-[#E7FE29] hover:bg-[#E7FE29] rounded-xl outline-[#E7FE29] hover:bg-[#D6E527] outline-offset-4 border-none'>
                       Claim Free Credit
                     </button>
+
+                    <ToastContainer></ToastContainer>
              </div>
 
                </div>

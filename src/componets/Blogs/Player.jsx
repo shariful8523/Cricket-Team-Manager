@@ -8,7 +8,8 @@ const Player = ({selectItem, handelDelete }) => {
     
 
     return (
-        <div className="flex flex-col items-center space-y-4 mb-10">
+        <div className="flex flex-col items-center space-y-4 mb-40">
+            
             {selectItem.map((item) => (
                 <div
                     key={item.id}
@@ -30,7 +31,7 @@ const Player = ({selectItem, handelDelete }) => {
                 </div>
                 
             ))}
-              <div class="  ">
+              <div class=" mb-32 ">
            <button  class=" -ml-[440px] mt-10 bg-yellow-400 text-black font-semibold px-4 py-2 rounded-lg border border-black">
             Add More Player
               </button>

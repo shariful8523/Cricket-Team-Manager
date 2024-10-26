@@ -2,33 +2,16 @@ import React, { useState } from 'react';
 import Blogs from '../componets/Blogs/Blogs'
 import Player from './Blogs/Player';
 
-      
 
 
 
-const Catagory = ({handelItem, selectItem,  handelDelete}) => {
+
+
+const Catagory = ({handelItem, selectItem,  handelDelete, blogs, view ,Available, Selected}) => {
     
    
 
-      const [view, setView] = useState ('Available Player')
-
-       const Available = () => {
-         
-        const avilable = 'Available Player' 
-
-        setView(avilable)
-
-        
-       };
-
-       const Selected = () => {
-
-       const Selected = `Selected Player(0/6)`
-
-       setView(Selected)
-
-       };
-
+      
 
 
 
@@ -37,7 +20,9 @@ const Catagory = ({handelItem, selectItem,  handelDelete}) => {
 
         <div className=' flex justify-between mx-auto py-12 w-11/12'>
               <div>
-                <p className='text-2xl font-bold'> {view} select</p>
+               {
+                 view==='Available Player'?<p className='text-lg font-bold'>Avilable Player</p>: <p className='text-lg font-bold'>Selected Player({selectItem.length}/6)</p>
+               }
              </div>
 
              <div className=''>
@@ -51,15 +36,16 @@ const Catagory = ({handelItem, selectItem,  handelDelete}) => {
           {/* blogs option */}
          <div className={` ${view==='Selected Player(0/6)' && 'hidden' }`}> 
 
-         <Blogs handelItem={handelItem}  ></Blogs>
+         <Blogs handelItem={handelItem} blogs={blogs}  ></Blogs>
          
           </div>
           
           <div className={` ${view==='Available Player' && 'hidden' } `}>
            <Player  selectItem={selectItem}  handelDelete={handelDelete} ></Player>
           </div>
-
+           
        </div>
+       
     );
 };
 
